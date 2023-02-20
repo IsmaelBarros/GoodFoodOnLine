@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#launch file
+.vccode/
+
 # C extensions
 *.so
 
