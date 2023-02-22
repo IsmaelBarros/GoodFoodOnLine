@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
+
 class UserManager(BaseUserManager):
     
     def create_user(self, first_name, last_name, username, email, password=None):
@@ -90,5 +91,6 @@ class UserProfile(models.Model):
     longitude = models.CharField(max_length=20, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
-    
 
+    def __str__(self) -> str:
+        return self.user.email
